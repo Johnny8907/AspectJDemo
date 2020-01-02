@@ -14,22 +14,22 @@ public class JointPointTraceAspect {
     private boolean enable = true;
     private String tag = "JointPointTraceAspect";
 
-    @Pointcut("execution(!synthetic * *(..)) && within(com.example.aspectjdemo.*)")
-    public void tracePoints(){}
+//    @Pointcut("execution(!synthetic * *(..)) && within(com.example.aspectjdemo.*)")
+//    public void tracePoints(){}
+//
+//    @Before("execution(!synthetic * *(..)) && within(com.example.aspectjdemo.*)")
+//    public void beforeTracePoints(JoinPoint joinPoint) {
+//        if (enable) {
+//            Signature codeSignature = joinPoint.getSignature();
+//            Log.d(tag, "Before " + joinPoint.toString());
+//        }
+//    }
 
-    @Before("execution(!synthetic * *(..)) && within(com.example.aspectjdemo.*)")
-    public void beforeTracePoints(JoinPoint joinPoint) {
-        if (enable) {
-            Signature codeSignature = joinPoint.getSignature();
-            Log.d(tag, "Before " + joinPoint.toString());
-        }
-    }
-
-    @After("tracePoints()")
-    public void afterTracePoints(JoinPoint joinPoint) {
-        if (enable) {
-            Signature codeSignature = joinPoint.getSignature();
-            Log.d(tag, "After " + joinPoint.toString());
-        }
-    }
+//    @After("tracePoints()")
+//    public void afterTracePoints(JoinPoint joinPoint) {
+//        if (enable) {
+//            Signature codeSignature = joinPoint.getSignature();
+//            Log.d(tag, "After " + joinPoint.toString());
+//        }
+//    }
 }
