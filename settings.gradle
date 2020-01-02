@@ -1,0 +1,2 @@
+include ':app', ':aspectruntime'
+rootProject.name='AspectJDemo'
